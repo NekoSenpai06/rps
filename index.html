@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>RPS MINIGAME</title>
+        <style>
+            .playBtn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .playBtn button {
+                padding: 20px 50px;
+                font-weight: bold;
+                border: 3px solid #6eccff;
+                border-radius: 20px;
+                cursor: pointer;
+                background-color: transparent;
+                color: #6eccff;
+            }
+
+            .playBtn button:hover {
+                background-color: #6eccff;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="playBtn">
+            <button onclick="playGame()">Play</button>
+        </div>
+        <div class="game" style="display: none;">
+            <h1>ROCK PAPER SCISSORS</h1>
+            <div class="options">
+                <button onclick="play('rock')" title="Rock">✊</button>
+                <button onclick="play('paper')" title="Paper">✋</button>
+                <button onclick="play('scissors')" title="Scissors">✌</button>
+            </div>
+            <div class="displayStat">
+                <div id="player">YOU: </div>
+                <div id="cpu">COMPUTER: </div>
+                <div id="display">RESULT</div>
+            </div>
+        </div>
+    </body>
+<script src="script.js"></script>
+</html>
